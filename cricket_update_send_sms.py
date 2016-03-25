@@ -10,7 +10,6 @@ import time
 
 # Goto http://cricscore-api.appspot.com/csa to get the match id
 url = 'http://cricscore-api.appspot.com/csa?id=<MATCH_ID>'
-
 while True:
 	response = urllib2.urlopen(url)
   	data = json.loads(response.read())
