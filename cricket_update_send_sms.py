@@ -27,17 +27,17 @@ while True:
   	try:
 		usock = opener.open(url, data)
   	except IOError:
-    	print "\nCan not connect to Server."
-    	raw_input("\nPress Enter to Exit")
-    	sys.exit(1)
+    		print "\nCan not connect to Server."
+    		raw_input("\nPress Enter to Exit")
+    		sys.exit(1)
   	jession_id = str(cj).split('~')[1].split(' ')[0]
   	send_sms_url = 'http://site24.way2sms.com/smstoss.action?'
   	send_sms_data = 'ssaction=ss&Token='+jession_id+'&mobile='+number+'&message='+message+'&msgLen=136'
   	opener.addheaders = [('Referer', 'http://site25.way2sms.com/sendSMS?Token='+jession_id)]
   	try:
-    	sms_sent_page = opener.open(send_sms_url,send_sms_data)
+    		sms_sent_page = opener.open(send_sms_url,send_sms_data)
   	except IOError:
-    	print "\nError While Sending the SMS"
-    	sys.exit(1)
+    		print "\nError While Sending the SMS"
+    		sys.exit(1)
   	print "\nSMS SENT"
   	time.sleep(5*60) #sleep for 5 minutes
