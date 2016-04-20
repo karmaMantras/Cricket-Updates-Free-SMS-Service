@@ -9,9 +9,9 @@ import json
 import time
 
 # Goto http://cricscore-api.appspot.com/csa to get the match id
-url = 'http://cricscore-api.appspot.com/csa?id=<MATCH_ID>'
+url_match = 'http://cricscore-api.appspot.com/csa?id=<MATCH_ID>'
 while True:
-	response = urllib2.urlopen(url)
+	response = urllib2.urlopen(url_match)
   	data = json.loads(response.read())
   	username = "<username>"
   	passwd = "<password>"
